@@ -1,0 +1,39 @@
+{
+  "name": "primis",
+  "description": "Command line tool for generate TypeScript project.",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": "aofleejay",
+  "scripts": {
+    "lint": "prettier --check 'src/**/*.js' README.md",
+    "format": "prettier --write 'src/**/*.js' README.md"
+  },
+  "bin": {
+    "primis": "./src/index.js"
+  },
+  "preferGlobal": true,
+  "dependencies": {
+    "chalk": "3.0.0",
+    "commander": "4.0.1",
+    "cross-spawn": "7.0.1",
+    "path": "0.12.7"
+  },
+  "keywords": [
+    "typescript",
+    "typescript starter",
+    "typescript boilerplate",
+    "primis",
+    "primisjs"
+  ],
+  "devDependencies": {
+    "husky": "3.0.9",
+    "prettier": "1.19.1",
+    "pretty-quick": "2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
