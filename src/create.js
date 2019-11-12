@@ -18,6 +18,12 @@ const program = new commander.Command(project.name)
   .action(function(name) {
     projectName = name
   })
+  .on('end', function() {
+    console.log('Success:')
+    console.log(`  cd ${chalk.green(project.name)}`)
+    console.log(`  yarn test`)
+    console.log()
+  })
 
 program.parse(process.argv)
 
