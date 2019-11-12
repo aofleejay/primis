@@ -105,7 +105,6 @@ const jestConfig = `module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
 }
-
 `
 
 fs.writeFileSync(path.join(root, 'jest.config.js'), jestConfig)
