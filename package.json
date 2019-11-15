@@ -1,7 +1,7 @@
 {
   "name": "primis",
   "description": "Command line tool for generate TypeScript project.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/index.js",
   "license": "MIT",
   "author": "aofleejay",
