@@ -6,6 +6,7 @@ const fs = require('fs-extra')
 const os = require('os')
 const spawn = require('cross-spawn')
 const chalk = require('chalk')
+const execSync = require('child_process').execSync
 
 const project = require('../package.json')
 
@@ -64,12 +65,22 @@ const devDependencies = [
   'typescript',
 ]
 
-let args = ['add', '-D', '-E']
-args = args.concat(devDependencies)
-args.push('--cwd')
-args.push(root)
+let command
+let args = []
 
-spawn.sync('yarn', args, { stdio: 'inherit' })
+try {
+  execSync('yarn -v', { stdio: 'ignore' })
+  command = 'yarn'
+  args = args.concat(['--cwd', root, 'add'])
+} catch {
+  command = 'npm'
+  args = args.concat(['--prefix', root, 'install'])
+}
+
+const commandOptions = ['-D', '-E']
+args = args.concat(devDependencies, commandOptions)
+
+spawn.sync(command, args, { stdio: 'inherit' })
 
 const templateDir = path.join(__dirname + '/template')
 fs.copySync(templateDir, root)
