@@ -59,6 +59,7 @@ const devDependencies = [
   '@typescript-eslint/parser',
   'eslint',
   'eslint-config-prettier',
+  'eslint-plugin-jest',
   'husky',
   'jest',
   'prettier',
