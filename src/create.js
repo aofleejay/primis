@@ -87,3 +87,4 @@ spawn.sync(command, args, { stdio: 'inherit' })
 
 const templateDir = path.join(__dirname + '/template')
 fs.copySync(templateDir, root)
+fs.moveSync(root + '/gitignore', root + '/.gitignore')
