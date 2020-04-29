@@ -18,6 +18,6 @@ npx primis <project-name>
 ## 🔧 What’s Included?
 
 - TypeScript
-- TSlint
+- ESlint
 - Prettier
 - Jest

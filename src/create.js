@@ -55,13 +55,15 @@ fs.writeFileSync(
 
 const devDependencies = [
   '@types/jest',
+  '@typescript-eslint/eslint-plugin',
+  '@typescript-eslint/parser',
+  'eslint',
+  'eslint-config-prettier',
   'husky',
   'jest',
   'prettier',
   'pretty-quick',
   'ts-jest',
-  'tslint',
-  'tslint-config-prettier',
   'typescript',
 ]
 
